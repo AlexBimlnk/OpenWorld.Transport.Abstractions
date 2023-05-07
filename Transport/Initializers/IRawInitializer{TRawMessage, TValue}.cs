@@ -1,10 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenWorld.Transport.Abstractions.Messages;
 
 namespace OpenWorld.Transport.Abstractions.Initializers;
-internal interface IRawInitializer_TRawMessage__TValue_
+
+/// <summary>
+/// Описывает инфраструктурного инициализатора.
+/// </summary>
+/// <typeparam name="TRawMessage">
+/// Тип исходного сообщения.
+/// </typeparam>
+/// <typeparam name="TValue">
+/// Тип тела сообщения.
+/// </typeparam>
+public interface IRawInitializer<TRawMessage, TValue>
+    where TRawMessage : IRawMessage<TValue>
 {
+    /// <summary>
+    /// Инициализирует коллекцию исходных сообщений.
+    /// </summary>
+    /// <param name="token">
+    /// Токен отмены операции.
+    /// </param>
+    /// <returns>
+    /// <see cref="Task{TResult}"/>, который завершится, когда сообщения инициализируются.
+    /// </returns>
+    public Task<IReadOnlyCollection<TRawMessage>> InitializeAsync(CancellationToken token);
 }

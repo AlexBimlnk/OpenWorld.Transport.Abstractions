@@ -21,7 +21,7 @@ public interface IRawReceiver<TRawMessage, TValue>
     /// Токен отмены операции.
     /// </param>
     /// <returns>
-    /// <see cref="Task"/>, который завершится, когда сообщение будет получено.
+    /// <see cref="Task{TResult}"/>, который завершится, когда сообщение будет получено.
     /// </returns>
     public Task<TRawMessage> ReceiveAsync(CancellationToken token);
 }
