@@ -1,4 +1,4 @@
-﻿using OpenWorld.Transport.Abstractions.Messages;
+﻿using OpenWorld.Transport.Abstractions.Messages.Raw;
 
 namespace OpenWorld.Transport.Abstractions.Receivers;
 
@@ -12,7 +12,7 @@ namespace OpenWorld.Transport.Abstractions.Receivers;
 /// Тип тела сообщения.
 /// </typeparam>
 public interface IRawReceiver<TRawMessage, TValue>
-    where TRawMessage : IRawMessage<TValue>
+    where TRawMessage : IRawReceivedMessage<TValue>
 {
     /// <summary>
     /// Получает исходное сообщение.

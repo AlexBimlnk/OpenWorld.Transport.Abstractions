@@ -1,4 +1,4 @@
-﻿namespace OpenWorld.Transport.Abstractions.Messages;
+﻿namespace OpenWorld.Transport.Abstractions.Messages.Raw;
 
 /// <summary>
 /// Описывает исходное сообщение с ключом, используемое инфраструктурным транспортом.
@@ -9,7 +9,7 @@
 /// <typeparam name="TValue">
 /// Тип тела сообщения.
 /// </typeparam>
-public interface IKeyableRawMessage<TKey, TValue> : IRawMessage<TValue>
+public interface IRawKeyableMessage<TKey, TValue> : IRawMessage<TValue>
 {
     /// <summary>
     /// Ключ сообщения.

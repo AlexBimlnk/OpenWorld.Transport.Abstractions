@@ -1,4 +1,4 @@
-﻿namespace OpenWorld.Transport.Abstractions.Messages;
+﻿namespace OpenWorld.Transport.Abstractions.Messages.Raw;
 
 /// <summary>
 /// Описывает исходное сообщение с ключом, обогащенное информацией о месте назначения.
@@ -9,8 +9,8 @@
 /// <typeparam name="TValue">
 /// Тип тела сообщения.
 /// </typeparam>
-public interface IKeyableRawTargetMessage<TKey, TValue> :
-    IKeyableRawMessage<TKey, TValue>,
+public interface IRawKeyableTargetMessage<TKey, TValue> :
+    IRawKeyableMessage<TKey, TValue>,
     IRawTargetMessage<TValue>
 {
 }

@@ -1,4 +1,4 @@
-﻿using OpenWorld.Transport.Abstractions.Messages;
+﻿using OpenWorld.Transport.Abstractions.Messages.Raw;
 
 namespace OpenWorld.Transport.Abstractions.Senders;
 

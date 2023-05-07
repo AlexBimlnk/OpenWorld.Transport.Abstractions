@@ -1,4 +1,4 @@
-﻿using OpenWorld.Transport.Abstractions.Messages;
+﻿using OpenWorld.Transport.Abstractions.Messages.Raw;
 
 namespace OpenWorld.Transport.Abstractions.Initializers;
 
@@ -21,7 +21,7 @@ public interface IRawInitializer<TRawMessage, TValue>
     /// Токен отмены операции.
     /// </param>
     /// <returns>
-    /// <see cref="Task{TResult}"/>, который завершится, когда сообщения инициализируются.
+    /// <see cref="Task{TResult}"/>, который завершится, когда сообщения инициализируются. 
     /// </returns>
     public Task<IReadOnlyCollection<TRawMessage>> InitializeAsync(CancellationToken token);
 }

@@ -1,4 +1,4 @@
-﻿namespace OpenWorld.Transport.Abstractions.Messages;
+﻿namespace OpenWorld.Transport.Abstractions.Messages.Raw;
 
 /// <summary>
 /// Описывает исходное сообщение, обогащенное информацией о месте назначения.

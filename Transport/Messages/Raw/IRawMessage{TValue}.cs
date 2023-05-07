@@ -1,4 +1,4 @@
-﻿namespace OpenWorld.Transport.Abstractions.Messages;
+﻿namespace OpenWorld.Transport.Abstractions.Messages.Raw;
 
 /// <summary>
 /// Описывает исходное сообщение, используемое инфраструктурным транспортом.
