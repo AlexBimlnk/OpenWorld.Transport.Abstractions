@@ -1,18 +1,18 @@
-﻿using OpenWorld.Transport.Abstractions.Messages.Raw;
+﻿using OpenWorld.Transport.Abstractions.Messages.Structured;
 
 namespace OpenWorld.Transport.Abstractions.Initializers;
 
 /// <summary>
-/// Описывает инфраструктурного инициализатора.
+/// Описывает конечного инициализатора.
 /// </summary>
-/// <typeparam name="TRawMessage">
+/// <typeparam name="TMessage">
 /// Тип исходного сообщения.
 /// </typeparam>
 /// <typeparam name="TValue">
 /// Тип тела сообщения.
 /// </typeparam>
-public interface IRawInitializer<TRawMessage, TValue>
-    where TRawMessage : IRawReceivedMessage<TValue>
+public interface IInitializer<TMessage, TValue>
+    where TMessage : IReceivedMessage<TValue>
 {
     /// <summary>
     /// Инициализирует коллекцию исходных сообщений.
@@ -23,5 +23,5 @@ public interface IRawInitializer<TRawMessage, TValue>
     /// <returns>
     /// <see cref="Task{TResult}"/>, который завершится, когда сообщения инициализируются. 
     /// </returns>
-    public Task<IReadOnlyCollection<TRawMessage>> InitializeAsync(CancellationToken token);
+    public Task<IReadOnlyCollection<TMessage>> InitializeAsync(CancellationToken token);
 }
