@@ -4,6 +4,12 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>OpenWorld.Transport.Abstractions</Title>
+    <Company>OpenWorld</Company>
+    <Authors>centuriin</Authors>
+    <PackageTags>transport; abstractions; sender; receiver; messages; initializer;</PackageTags>
+    <RepositoryUrl>https://github.com/AlexBimlnk/OpenWorld.Transport.Abstractions</RepositoryUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
