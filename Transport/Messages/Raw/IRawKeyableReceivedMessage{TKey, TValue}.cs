@@ -13,5 +13,6 @@
 public interface IRawKeyableReceivedMessage<TKey, TValue> :
     IRawKeyableMessage<TKey, TValue>,
     IRawReceivedMessage<TValue>
+    where TKey : IEquatable<TKey>
 {
 }

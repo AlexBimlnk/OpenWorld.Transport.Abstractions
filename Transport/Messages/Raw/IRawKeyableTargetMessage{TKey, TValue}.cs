@@ -12,5 +12,6 @@
 public interface IRawKeyableTargetMessage<TKey, TValue> :
     IRawKeyableMessage<TKey, TValue>,
     IRawTargetMessage<TValue>
+    where TKey : IEquatable<TKey>
 {
 }

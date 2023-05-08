@@ -12,5 +12,6 @@
 public interface IRawKeyableCommitableMessage<TKey, TValue> :
     IRawKeyableReceivedMessage<TKey, TValue>,
     IRawCommitableMessage<TValue>
+    where TKey : IEquatable<TKey>
 {
 }

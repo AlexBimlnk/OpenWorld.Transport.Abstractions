@@ -10,6 +10,7 @@
 /// Тип тела сообщения.
 /// </typeparam>
 public interface IRawKeyableMessage<TKey, TValue> : IRawMessage<TValue>
+    where TKey : IEquatable<TKey>
 {
     /// <summary>
     /// Ключ сообщения.
