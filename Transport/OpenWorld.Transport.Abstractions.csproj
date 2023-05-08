@@ -11,6 +11,7 @@
     <RepositoryUrl>https://github.com/AlexBimlnk/OpenWorld.Transport.Abstractions</RepositoryUrl>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<Version>1.0.0.1</Version>
   </PropertyGroup>
 
 </Project>
